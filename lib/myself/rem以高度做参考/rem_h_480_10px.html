@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+		<script src="http://libs.baidu.com/jquery/2.0.0/jquery.min.js"></script>
+		<script src="rem_adaption.js" type="text/javascript" charset="utf-8"></script>
+		<title></title>
+		<style type="text/css">
+			* {
+				margin: 0;
+				padding: 0;
+			}
+			
+			body {
+				font-size: 20px;
+			}
+			
+			input,
+			button {
+				height: 20px;
+				font-size: 20px;
+			}
+		</style>
+	</head>
+
+	<body>
+		
+		要转换的元件 高度：
+		<input type="text" id="t1" value="" /><br> * 输入psd页面 高度：
+		<input type="text" id="t2" value="" /><br> * 输入调试窗口 高度：
+		<input type="text" id="t3" value="480" disabled="disabled"/><br> 转换的 rem 值为：
+		<input type="text" id="t4" value="" /><br> 宽度百分比为：
+		<input type="text" id="t5" value="" /><br>
+		
+	</body>
+	<script type="text/javascript">
+		document.onkeydown = function(event) {
+			if (event.keyCode == 13) {
+				t4.value = t1.value * t3.value / (t2.value * 10);
+				t5.value = t1.value / t2.value * 100 + "%";
+			}
+		}
+	</script>
+
+</html>
